@@ -1,0 +1,353 @@
+
+:root {
+  --warna-primer: #3498db;
+  --warna-sekunder: #2ecc71;
+  --warna-latar: #f4f6f7;
+  --warna-kartu: #ffffff;
+  --warna-teks-utama: #2c3e50;
+  --warna-teks-kedua: #7f8c8d;
+  --bayangan-ringan: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --bayangan-medium: 0 6px 12px rgba(0, 0, 0, 0.15);
+  --transisi-halus: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--warna-latar);
+  line-height: 1.6;
+  color: var(--warna-teks-utama);
+}
+
+.kontainer-klasifikasi {
+  max-width: 1600px;
+  margin: 30px auto;
+  background-color: var(--warna-kartu);
+  border-radius: 12px;
+  box-shadow: var(--bayangan-ringan);
+  padding: 25px;
+}
+
+h3 {
+  color: #3498db;
+}
+
+.text-hasil {
+  color: #337fd7;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* Navigasi Tab */
+.navigasi-tab {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  background-color: var(--warna-latar);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tombol-tab {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background-color: transparent;
+  color: var(--warna-teks-kedua);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transisi-halus);
+}
+
+.tombol-tab.aktif {
+  background-color: var(--warna-primer);
+  color: white;
+}
+
+.tombol-tab:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Kontainer Dasbor */
+.kontainer-dasbor {
+  background-color: var(--warna-latar);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.column-kontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.judul-dasbor {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.kontainer-gambar {
+  background-color: #25a7b1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.kontainer-gambar img {
+  max-width: 60%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.konten-dasbor {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+}
+
+/* Prediksi Teratas */
+.prediksi-teratas {
+  background-color: var(--warna-kartu);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--bayangan-ringan);
+}
+
+
+.detail-prediksi-teratas {
+  background-color: var(--warna-primer);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Detail Kelas */
+.detail-kelas {
+  background-color: var(--warna-kartu);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: var(--bayangan-ringan);
+}
+
+.item-kelas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--warna-latar);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: var(--transisi-halus);
+}
+
+.item-kelas:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--bayangan-ringan);
+}
+
+.lencana-kepercayaan {
+  background-color: var(--warna-sekunder);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+}
+
+/* Bagian Webcam */
+.bagian-webcam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.row-webcam-tombol {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+
+.tombol-mulai-kamera,
+.tombol-berhenti-kamera {
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transisi-halus);
+}
+
+.tombol-mulai-kamera {
+  background-color: var(--warna-primer);
+  color: white;
+  background-color: #10c665;
+}
+
+.tombol-berhenti-kamera {
+  background-color: #f51027;
+  color: white;
+}
+
+.kontainer-webcam {
+  max-width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+
+}
+
+/* Bagian Unggah */
+.bagian-unggah {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.input-berkas {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  border: 2px dashed var(--warna-primer);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.kontainer-gambar-diunggah {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--bayangan-medium);
+}
+
+.gambar-diunggah {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Bagian Gambar Serupa */
+.bagian-gambar-serupa {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.kisi-gambar-serupa {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.item-gambar-serupa {
+  background-color: var(--warna-latar);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--bayangan-ringan);
+  transition: var(--transisi-halus);
+}
+
+.item-gambar-serupa:hover {
+  transform: scale(1.05);
+}
+
+.gambar-serupa {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.kepercayaan-gambar-serupa {
+  padding: 10px;
+  background-color: var(--warna-sekunder);
+  color: white;
+  text-align: center;
+}
+
+/* Bagian Prediksi */
+.bagian-prediksi {
+  margin-top: 25px;
+}
+
+.item-prediksi {
+  margin-bottom: 15px;
+}
+
+.label-prediksi {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.batang-prediksi {
+  width: 100%;
+  height: 25px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.pengisi-batang-prediksi {
+  height: 100%;
+  border-radius: 15px;
+  transition: width 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsivitas */
+@media screen and (max-width: 768px) {
+  .konten-dasbor {
+    grid-template-columns: 1fr;
+  }
+
+  .kisi-gambar-serupa {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .kontainer-klasifikasi {
+    margin: 15px;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .kisi-gambar-serupa {
+    grid-template-columns: 1fr;
+  }
+
+  .navigasi-tab {
+    flex-direction: column;
+  }
+
+  .tombol-tab {
+    padding: 15px;
+  }
+}
