@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import * as tmImage from '@teachablemachine/image';
 import './App.css';
 
-//  Dasbor
 const Dasbor = ({ prediksi, infoKelas }) => {
   const prediksiDiurutkan = [...prediksi].sort((a, b) => b.probability - a.probability);
 
